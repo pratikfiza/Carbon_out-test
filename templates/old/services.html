@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>RIIYPR</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  
+  
+    <link href="{{ url_for('static', path='assets/js/main.js') }}">
+  
+  
+    <link href="{{ url_for('static', path='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}">
+  
+    <link href="{{ url_for('static', path='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  
+    <link href="{{ url_for('static', path='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  
+    <link href="{{ url_for('static', path='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  
+    <link href="{{ url_for('static', path='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  
+    <link href="{{ url_for('static', path='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+  
+  
+    <link href="{{ url_for('static', path='assets/css/variables.css')}}" rel="stylesheet">
+  
+    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+    <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
+  
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static', path='assets/css/main.css') }}" rel="stylesheet">
+  
+    <!-- <link href="assets/css/main.css" rel="stylesheet"> -->
+  
+    <!-- =======================================================
+    An XLNC.io Development 
+    ======================================================== -->
+  </head>
+  
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+  .btn-fixed-bottom-right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50px;
+    z-index: 1000;
+  }
+</style>
+<body>
+
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="{{ url_for('static', path = 'assets/images/log.png' )}}" >
+
+        <!-- <h1>HeroBiz<span>.</span></h1> -->
+      </a>
+
+     
+      <nav id="navbar" class="navbar">
+        <ul>
+
+          <li class="nav-link scrollto"><a href="/"><span>Home</span> </a>
+         
+          </li>
+
+          <li><a class="nav-link scrollto" href="/#about">About</a></li>
+          <li><a class="nav-link scrollto" href="/#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="/#team">Team</a></li>
+          <!-- <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li>
+                <a href="#">Column 1 link 1</a>
+                <a href="#">Column 1 link 2</a>
+                <a href="#">Column 1 link 3</a>
+              </li>
+              <li>
+                <a href="#">Column 2 link 1</a>
+                <a href="#">Column 2 link 2</a>
+                <a href="#">Column 3 link 3</a>
+              </li>
+              <li>
+                <a href="#">Column 3 link 1</a>
+                <a href="#">Column 3 link 2</a>
+                <a href="#">Column 3 link 3</a>
+              </li>
+              <li>
+                <a href="#">Column 4 link 1</a>
+                <a href="#">Column 4 link 2</a>
+                <a href="#">Column 4 link 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+         
+          <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav>
+      
+      <!-- .navbar -->
+    
+      <!-- <a class="btn-getstarted scrollto" href="index.html#about">Get Started</a>
+      <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
+      </div>
+    </div>
+    
+  </header>
+
+
+
+
+
+  <div class="container" style="margin-top:150px">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+            <img src="{{ url_for('static', path = service_link )}}" class="card-img-top" alt="Icon Image">
+             <div class="card-body">
+            <h4 class="card-title"><b>{{service_header}}</b></h4>
+            <p class="card-text">{{service_body}}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+         <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Connect Us</h5>
+        <form>
+          
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" onclick="insert_data()"class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel">Form Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your form elements here -->
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <div class="g-recaptcha" data-sitekey="6LdGMkQmAAAAAH2bzcPzgmw2xmeA_wekrp8f66QE"></div>
+          </div>
+          <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+      
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="formButton" class="btn btn-primary btn-fixed-bottom-right" data-toggle="modal" data-target="#formModal">
+    <i class="fas fa-envelope"></i> 
+  </button>
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-content">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>RIIYPR</h3>
+              <p>
+                Corporate office address – 1B/1, Gobinda Mondal Lane.<br> Ashirbad Apartment, Ground Floor,<br> Kolkata – 700002<br>
+                <strong>Phone:</strong> +91 6291669191<br>
+                <strong>Email:</strong> admin@riiypr.in<br>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Round The Clock Managed Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#"> Data Center IT Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Data Center NON IT Maintenance</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Software services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">  Professional Consultancy Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Multi OEM - Enterprise Equipment Support
+              </a></li>
+
+            </ul>
+          </div>
+         
+          
+          
+        
+          
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>RIIYPR</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+            Designed by <a href="">XLNC.io</a>
+          </div>
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+
+   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+
+
+  <script src="{{ url_for('static', path='assets/js/main.js') }}"></script>
+
+  <script src="{{ url_for('static', path='assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', path='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', path='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', path='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+
+
+  
+
+
+  
+  
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+//     function savedata()
+//     {
+
+//         $.ajax({
+//         data: JSON.stringify({
+//             name : $('#name').val(),
+//             email : $('#email').val(),
+//             message : $('#message').val(),
+            
+//         })
+//         ,
+//         type : 'POST',
+//         url : '/add_customer_msg',
+//         contentType: "application/json; charset=utf-8"
+//     })
+//     .done(function(data) {
+//         console.log(data);
+//     if (data.error) {
+          
+//             console.log('error');
+         
+
+//         }
+//         else {
+          
+//             console.log("done");
+            
+//         }
+// });
+//     }
+
+
+
+
+
+function insert_data()
+            {
+                $.ajax({
+                data: JSON.stringify({
+                  name : $('#name').val(),
+                email : $('#email').val(),
+                message : $('#message').val(),
+            
+                })
+                ,
+                type : 'POST',
+                url : '/add_customer_msg',
+                contentType: "application/json; charset=utf-8"
+            })
+            .done(function(data) {
+                if (data.success) {
+                    window.location.reload(true)    
+                }
+                else {
+                  console.log("Error");
+                    
+                }
+            });
+                }
+
+
+          
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+   body {
+      background-image: url('https://t3.ftcdn.net/jpg/01/22/71/96/360_F_122719641_V0yw2cAOrfxsON3HeWi2Sf4iVxhv27QO.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+
+    .div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 500px ;
+      
+    }
+
+    .signup {
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      margin-left: 500px;
+      
+      
+    }
+
+    .signup h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .signup label {
+      font-weight: bold;
+      color: aliceblue;
+    }
+
+    .signup input {
+      width: 50%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .signup button:hover {
+      background-color: #0056b3;
+    }
+
+</style>
+
+
+
+<div class="signup" style="padding: 50px;">
+          
+  <label class="" style="font-size:35px ;">Admin Login</label><br><br><br>
+<label class="form-label">User Name</label>
+<input id="username" type="email" class="form-control" placeholder="Enter email"><br>
+<label class="form-label">Password</label>
+<input id="password" type="password" class="form-control"  placeholder="Password"  autocomplete="off">
+
+<br>
+ <button type="submit" onclick="validate_user()" class="btn btn-primary w-100">Login</button>
+
+
+<!-- 
+         <div class="login-container">
+          <div class="login-form">
+            <h2>Admin Login</h2>
+            <form>
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+              </div>
+              <div class="form-group">
+                <button type="submit" onclick="validate_user()" class="btn btn-primary w-100">Login</button>
+            
+              </div>
+            </form>
+          </div>
+        </div> -->
+</div>
+
+
+      
+     
+    </body>
+    <script>
+    function validate_user()
+    {
+        $.ajax({
+        data: JSON.stringify({
+            user_name : $('#username').val(),
+            password : $('#password').val()
+        })
+        ,
+        type : 'POST',
+        url : '/validate_credentials',
+        contentType: "application/json; charset=utf-8"
+    })
+    .done(function(data) {
+        if (data.success) {
+          document.location.href = '/redirect_page?token='+data.token
+        }
+        else {
+            
+        }
+    });
+        }
+    
+    
+    
+    
+    </script>
+
+    <script src="./static/dist/js/tabler.min.js?1668287865" defer></script>
+    <script src="./static/dist/js/demo.min.js?1668287865" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
